@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ssoAuth
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true
+
+auth:
+  tokenValiditySeconds: 1200  #token存储到redis的过期时间
+  clientId: client_001
+  clientSecret: 123456
+  cookieDomain: mygallop.cn
+  cookieMaxAge: -1
+encrypt:
+  key-store:
+    location: classpath:/keystore.jks
+    secret: gallop123
+    alias: mytest
+    password: 123456
+
+user:
+  service:
+    version: 1.0.0

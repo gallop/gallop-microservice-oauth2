@@ -1,0 +1,13 @@
+server:
+  port: 56020 #启动端口 命令行注入
+
+spring:
+  application:
+    name: gallop-gateway
+  main:
+    allow-bean-definition-overriding: true # Spring Boot 2.1 需要设定
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.129:8848
+        namespace: 34700314-bffc-4f16-bf9e-047b80253afe # 34700314-bffc-4f16-bf9e-047b80253afe 19c34bb4-5434-4d6c-bb12-e551a38f57fa

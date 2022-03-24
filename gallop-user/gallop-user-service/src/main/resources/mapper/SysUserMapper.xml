@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gallop.microservice.user.mapper.SysUserMapper">
+
+    <resultMap id="sysUserResult" type="com.gallop.microservice.user.pojo.SysUser">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="last_login_ip" jdbcType="VARCHAR" property="lastLoginIp" />
+        <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+        <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+        <result column="birthday" property="birthday" />
+        <result column="sex" property="sex" />
+        <result column="email" property="email" />
+        <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+        <result column="deleted" jdbcType="BIT" property="deleted" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="admin_type" jdbcType="INTEGER" property="adminType" />
+
+        <result column="role_ids" jdbcType="VARCHAR" property="roleIds"
+                typeHandler="com.gallop.microservice.user.mybatis.JsonIntegerArrayTypeHandler" />
+    </resultMap>
+
+</mapper>
