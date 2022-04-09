@@ -43,12 +43,12 @@
             <version>1.2.5</version>
         </dependency>
 
-        <!--验证码-->
+       <!-- &lt;!&ndash;验证码&ndash;&gt;
         <dependency>
             <groupId>com.anji-plus</groupId>
             <artifactId>spring-boot-starter-captcha</artifactId>
             <version>1.2.8</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba</groupId>

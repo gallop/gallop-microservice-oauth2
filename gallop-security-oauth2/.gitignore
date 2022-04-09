@@ -31,4 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/gallop-security-oauth2/.mvn/wrapper/

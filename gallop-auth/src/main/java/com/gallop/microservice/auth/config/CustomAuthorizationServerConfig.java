@@ -153,7 +153,10 @@ public class CustomAuthorizationServerConfig extends AuthorizationServerConfigur
         delegates.add(jwtTokenEnhancer());
         delegates.add(jwtAccessTokenConverter);
         enhancerChain.setTokenEnhancers(delegates);
-
+        System.err.println("--------------tokenStore="+tokenStore);
+        for (TokenEnhancer tokenEnhancer:delegates){
+            System.err.println("tokenEnhancer="+tokenEnhancer);
+        }
         endpoints.accessTokenConverter(jwtAccessTokenConverter)
                 .authenticationManager(authenticationManagerBean)//认证管理器 使用密码模式需要配置
                 .tokenEnhancer(enhancerChain)

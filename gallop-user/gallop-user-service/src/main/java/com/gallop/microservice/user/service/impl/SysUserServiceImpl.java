@@ -53,7 +53,14 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         LambdaQueryWrapper<SysUser> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(SysUser::getUsername, username);
         queryWrapper.ne(SysUser::getDeleted, CommonStatusEnum.DELETED.getCode());
-        return this.getOne(queryWrapper);
+        SysUser user = this.getOne(queryWrapper);
+        if(user ==null){
+            queryWrapper.clear();
+            queryWrapper.eq(SysUser::getPhone, username);
+            queryWrapper.ne(SysUser::getDeleted, CommonStatusEnum.DELETED.getCode());
+            user = this.getOne(queryWrapper);
+        }
+        return user;
     }
 
     @Override
