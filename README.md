@@ -24,3 +24,8 @@
 1、gateway 模块还没开发配置；  
 2、OpenFeign 还没开发配置；  
 3、sentinel 结合OpenFeign 做限流操作还没开发配置； 
+
+2022-04-09:
+增加gallop-security-oauth2 认证中心模块：
+1、增加一个短信验证码登入的过滤器；
+2、将oauth2 的token生成机制集成到spring security的登入认证流程中；
